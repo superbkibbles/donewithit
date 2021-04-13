@@ -1,14 +1,14 @@
 {
   "expo": {
     "name": "doneWithIt",
-    "slug": "doneWithIt",
+    "slug": "donewithit",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./app/assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./app/assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#e63c4b"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,6 +21,23 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "description": "this is a market place for selling what you don't need anymore",
+    "notification": {
+      "iosDisplayInForeground": true
+    },
+    "extra": {
+      "bugsnag": {
+        "apiKey": "34e1a4e341989042447f87edec188b80"
+      }
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "@bugsnag/expo/hooks/post-publish.js",
+          "config": {}
+        }
+      ]
     }
   }
 }
